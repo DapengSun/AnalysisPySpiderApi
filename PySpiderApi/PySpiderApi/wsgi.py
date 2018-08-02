@@ -12,7 +12,7 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 import sys
-sys.path.append("/var/www/AnalysisPySpiderApi/PySpiderApi/PySpiderApi")
+sys.path.append("/var/www/AnalysisPySpiderApi/PySpiderApi")
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "PySpiderApi.settings")
 

@@ -7,6 +7,10 @@ from LianJiaSpiderApi.LianJiaSpiderQueue import LianJiaSpiderQueue
 from Common.Reponse import json_response
 from Common.EnumType import ReponseCode
 
+@csrf_exempt
+def index(request):
+    return render(request,'index.html')
+
 # 将待爬虫的URL放到任务队列中 进行排队
 @require_http_methods(["POST"])
 @csrf_exempt

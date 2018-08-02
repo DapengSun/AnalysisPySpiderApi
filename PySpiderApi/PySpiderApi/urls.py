@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from LianJiaSpiderApi.views import pushjobqueue
+from LianJiaSpiderApi.views import index,pushjobqueue
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
 
+    # 链家二手房爬虫入队列
+    url(r'^index/', index),
     # 链家二手房爬虫入队列
     url(r'^lianjia/ershoufang/api/pushjobqueue',pushjobqueue),
 ]
